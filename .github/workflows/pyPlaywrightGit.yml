@@ -23,7 +23,7 @@ jobs:
         python -m playwright install
    
     - name: Run pytest tests
-      run: python -m pytest
+      run: pytest
     
     - name: Upload test reports
       uses: actions/upload-artifact@v4
