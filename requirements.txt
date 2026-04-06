@@ -1,7 +1,7 @@
 pytest==9.0.2
+pytest-playwright==0.7.2
 playwright==1.48.0
 python-dotenv==1.0.1
 pytest-xdist==3.8.0
 pytest-rerunfailures==14.0
 py
-python-dotenv
