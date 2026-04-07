@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Optional
 class Config:
@@ -72,6 +73,6 @@ def load_config(path: Path) -> Config:
         
         browser=raw["browser"],
         headless=_bool(raw["headless"]),
-        timeout_ms=int(raw["timeout_ms"]),
-        parallel=int(raw["parallel"]),
+        timeout_ms=_int(raw["timeout_ms"]),
+        parallel=_int(raw["parallel"]),
     )

@@ -15,21 +15,18 @@ class Button_Actions:
         assert self.helper.is_visible(ButtonPage.disabled_button)
         assert self.helper.is_disabled(ButtonPage.disabled_button)
 
-    def verify_doubleClickBtn(self):
+    def verify_doubleClickBtn(self, msg: str):
         assert self.helper.is_visible(ButtonPage.double_click_button)
         self.page.locator(ButtonPage.double_click_button).dblclick()
         assert self.helper.is_visible(ButtonPage.result_notification)
         result_text = self.helper.get_text(ButtonPage.result_notification)
 
-        assert result_text == "You Double-clicked on button!"
+        assert result_text == msg
 
-    def verify_rightClickBtn(self):
+    def verify_rightClickBtn(self, msg: str):
         assert self.helper.is_visible(ButtonPage.right_click_button)
         self.page.locator(ButtonPage.right_click_button).click(button="right")
         assert self.helper.is_visible(ButtonPage.result_notification)
         result_text = self.helper.get_text(ButtonPage.result_notification)
 
-        assert result_text == "You Right-clicked on button!"
-
-
-
+        assert result_text == msg
